@@ -21,8 +21,9 @@ def update_color():
 
 def add_two_elems():
     global root
-    Butt.grid(row=1, column=0, sticky=E+W+S+N)
-    Txt.grid(row=1, column=1, columnspan=2, sticky=E+W+S+N)
+    Butt.place(x=0, y=30, width=60, height=30)
+    Txt.place(x=60, y=30, width=60, height=30)
+
 
 colours = get_colours()
 
@@ -38,9 +39,9 @@ root.rowconfigure(0, weight=10)
 root.rowconfigure(1, weight=1)
 
 Add = Button(root, text="Add", command=add_two_elems)
-Add.grid(row=0, column=0, sticky=E+W+S+N)
+Add.place(x=0, y=0, width=60, height=30)
 Exit = Button(root, text="Exit", command=root.quit)
-Exit.grid(row=0, column=1, sticky=E+W+S+N)
+Exit.place(x=60, y=0, width=60, height=30)
 
 Txt = Label(root, text="Label", bg="PeachPuff")
 Butt = Button(root, text="Button", command=update_color)
